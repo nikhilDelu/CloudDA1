@@ -7,9 +7,10 @@ config();
 
 const app = express();
 app.use(json());
-app.use(cors());
+app.use(cors({
+  origin: 'http://13.60.227.31:5000',
+}));
 
-// Connect to MongoDB
 connect(
   "mongodb+srv://projectyjka:53yjka21@asciicluster0.pgohfwc.mongodb.net/cloudda1DB"
 )
