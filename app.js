@@ -8,7 +8,12 @@ config();
 const app = express();
 app.use(json());
 app.use(cors({
-  origin: 'http://13.60.227.31:5000',
+  origin: "https://cloudda1client.vercel.app/",
+}));
+app.use(cors({
+    origin: 'https://your-vercel-frontend-domain.vercel.app', // Replace with your actual Vercel domain
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    credentials: true,
 }));
 
 connect(
